@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
 
+console.log(process.env.PORT);
 const connection = require('./config/db.config');
 connection.once('open',()=>console.log('DATABASE CONNECTED'));
 connection.on('error',()=>console.log('DB ERROR'));
