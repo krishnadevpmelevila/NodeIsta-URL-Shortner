@@ -9,7 +9,7 @@ $(function() {
     $(".shorturl").submit(function(e) {
       $(".mdl-spinner").fadeIn("slow").css("display", "inline-block");
       e.preventDefault();
-      var baseUrl = "http://link.nodeitsa.com:31424/api/url/shorten"
+      var baseUrl = "https://link.nodeitsa.com:31424/api/url/shorten"
       var url = $("#url").val();
       var text = $("#text").val();
       var sent = {"longUrl":url}
