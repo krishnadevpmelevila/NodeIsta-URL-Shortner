@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Url = require('../models/UrlModel')
-
+router.get('/',(req,res)=>{
+	return res.redirect('http://shortlink.nodeista.com')
+});
 router.get('/:code',async(req,res)=>{
     try{
         console.log(req.params.code);
